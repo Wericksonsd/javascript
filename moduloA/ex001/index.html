@@ -25,10 +25,13 @@
       const nome = window.prompt('Qual seu nome?')
       window.alert('Seja bem-vindo ' + nome + '!')
 
-      const n1 = Number.parseInt(window.prompt('Digite um número:'))
-      const n2 = parseInt(prompt('Digite outro número:'))
+      const n1 = Number(prompt('Digite um número:'))
+      const n2 = Number(prompt('Digite outro número:'))
       const soma = n1 + n2
       window.alert('A soma é de ' + soma + '.')
+      alert(`O aluno ${nome} tirou ${n1} + ${n2} em média!`)
+      document.write(`Olá, ${nome}! Seu nome possui ${nome.lenght} letras, e <br/>`)
+      document.write(`sua forma maiúscula é ${nome.toLocaleUpperCase()} e minúsculo é ${nome.toLocaleLowerCase()}`)
 
     </script>
     
