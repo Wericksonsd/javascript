@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testando DOM</title>
+    <style>
+        .bot{
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            background-color: rgb(7, 129, 48);
+            color: aliceblue;
+            line-height: 200px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Testando o DOM</h1>
@@ -14,6 +25,10 @@
         <li>Tchau</li>
         <li>Eita</li>
     </ul>
+
+    <div class="bot">
+           <h1>OLÁ</h1>
+    </div>
     <p>TESTE</p>
     <p>Teste</p>
 
@@ -21,12 +36,34 @@
         window.document.querySelector('p').innerHTML = ('Olá <strong> Mundo </strong>.')
 
         const d = window.document.querySelector('li')
+        const bt = window.document.querySelector('.bot')
 
         d.style.background = 'green'
         d.style.padding = '2px 10px'
         d.style.color = 'white'
         d.style.textDecoration = 'underline'
         d.innerText = ('Nossa')
+
+        bt.addEventListener('click', clicar)
+        bt.addEventListener('mouseenter', entrar)
+        bt.addEventListener('mouseout', saiu)
+
+        function clicar(){
+            bt.innerText = 'Clicou'
+            bt.style.background = 'red'
+
+        }
+
+        function entrar(){
+            bt.innerText = 'Entrou!'
+        }
+
+        function saiu(){
+            bt.innerText = 'Arrombado!'
+            bt.style.background = 'green'
+        }
     </script>
+
+
 </body>
 </html>
