@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando DOM</title>
+</head>
+<body>
+    <h1>Testando o DOM</h1>
+    <h2>Ultilizando para modificar child</h2>
+    <ul>
+        <li>OI</li>
+        <li>Tchau</li>
+        <li>Eita</li>
+    </ul>
+    <p>TESTE</p>
+    <p>Teste</p>
+
+    <script>
+        window.document.querySelector('p').innerHTML = ('Olá <strong> Mundo </strong>.')
+
+        const d = window.document.querySelector('li')
+
+        d.style.background = 'green'
+        d.style.padding = '2px 10px'
+        d.style.color = 'white'
+        d.style.textDecoration = 'underline'
+        d.innerText = ('Nossa')
+    </script>
+</body>
+</html>
