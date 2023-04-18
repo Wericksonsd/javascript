@@ -116,7 +116,7 @@
             <p>ESCOLHER TIPO</p>
         </div>
         <table border="1" id="pokedex">
-            <tr>
+            <tr id="poketabela">
                 <td>
                     <p>CHARMANDER</p>
                 </td>
@@ -133,10 +133,11 @@
     </div> 
 
  <script>
-        const newPokemon = window.document.querySelector('#pokedex')
+        const newPokemon = window.document.querySelector('#poketabela')
 
         function criarPokemon(){
             var pokemon = String.parseString(window.prompt("Digite o pokemon que queira adicionar:\n","NOVO POKEMON"))
+            
         }
  </script>
 
