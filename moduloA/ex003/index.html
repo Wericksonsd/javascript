@@ -15,7 +15,7 @@
         body{
             height: 100vh;
             padding: 50px;
-            background: linear-gradient(357deg, rgba(240,239,255,1) 0%, rgba(255,255,255,1) 35%, rgba(203,229,241,1) 100%);
+            background: linear-gradient(357deg, rgba(240,239,255,1) 0%, rgba(255,255,255,1) 35%, rgb(176, 204, 218) 100%);
         }
 
         h1{
@@ -35,6 +35,7 @@
             width: 450px;
             display: grid;
             grid-template-columns: 1 1;
+            gap: 0;
         }
 
         #d1{
@@ -67,6 +68,7 @@
 
         td{
             width: 225px;
+            min-height: 20px;
         }
 
         td>p{
@@ -147,6 +149,7 @@
             var pokemon = window.prompt("Digite o pokemon que queira adicionar:\n","NOVO POKEMON");
             var tipo = window.prompt("Digite o tipo do pokemon que queira adicionar:\n","TIPO POKEMON");
             
+            var newPokemon = document.querySelector('#pokedex')
             var newRow = document.createElement('tr');
             var newPokemonCell = document.createElement('td');
             var newTypeCell = document.createElement('td');
@@ -157,7 +160,7 @@
             newRow.appendChild(newPokemonCell);
             newRow.appendChild(newTypeCell);
             
-            newPokemon.appendChild(newRow);           
+            newPokemon.appendChild(newRow);       
         }
 
  </script>
