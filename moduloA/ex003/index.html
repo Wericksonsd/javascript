@@ -133,15 +133,33 @@
     </div> 
 
  <script>
-        const newPokemon = window.document.querySelector('#pokedex')
+       /* const newPokemon = window.document.querySelector('#pokedex')
         const newRow = window.document.createElement('tr')
         const createPoke = window.document.createElement('td')
 
         function criarPokemon(){
-            var pokemon = String.parseString(window.prompt("Digite o pokemon que queira adicionar:\n","NOVO POKEMON"))
-            var tipo = String.parseString(window.prompt("Digite o tipo do pokemon que queira adicionar:\n","TIPO POKEMON"))
-            newRow.appendChild(createPoke.innerHTML = <p> pokemon </p> , createPoke.innerHTML = <p> tipo </p>)            
+            var pokemon = window.prompt("Digite o pokemon que queira adicionar:\n","NOVO POKEMON")
+            var tipo = window.prompt("Digite o tipo do pokemon que queira adicionar:\n","TIPO POKEMON")
+            newPokemon.appendChild(newRow.appendChild(createPoke.innerHTML = <p> pokemon </p> , createPoke.innerHTML = <p> tipo </p>))           
+        }*/
+
+        function criarPokemon(){
+            var pokemon = window.prompt("Digite o pokemon que queira adicionar:\n","NOVO POKEMON");
+            var tipo = window.prompt("Digite o tipo do pokemon que queira adicionar:\n","TIPO POKEMON");
+            
+            var newRow = document.createElement('tr');
+            var newPokemonCell = document.createElement('td');
+            var newTypeCell = document.createElement('td');
+            
+            newPokemonCell.innerHTML = "<p>" + pokemon + "</p>";
+            newTypeCell.innerHTML = "<p>" + tipo + "</p>";
+            
+            newRow.appendChild(newPokemonCell);
+            newRow.appendChild(newTypeCell);
+            
+            newPokemon.appendChild(newRow);           
         }
+
  </script>
 
 </body>

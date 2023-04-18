@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add row to table dynamically</title>
+	<script>
+		function addRow() {
+			// Get input values
+			var name = document.getElementById("name").value;
+			var hp = document.getElementById("hp").value;
+			var attack = document.getElementById("attack").value;
+			var defense = document.getElementById("defense").value;
+			
+			// Create new row
+			var table = document.getElementById("pokemon-table");
+			var newRow = table.insertRow(-1);
+			var nameCell = newRow.insertCell(0);
+			var hpCell = newRow.insertCell(1);
+			var attackCell = newRow.insertCell(2);
+			var defenseCell = newRow.insertCell(3);
+			
+			// Add input values to the new row
+			nameCell.innerHTML = name;
+			hpCell.innerHTML = hp;
+			attackCell.innerHTML = attack;
+			defenseCell.innerHTML = defense;
+		}
+	</script>
+</head>
+<body>
+	<table id="pokemon-table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>HP</th>
+				<th>Attack</th>
+				<th>Defense</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Pikachu</td>
+				<td>35</td>
+				<td>55</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td>Bulbasaur</td>
+				<td>45</td>
+				<td>49</td>
+				<td>49</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<label for="name">Name:</label>
+	<input type="text" id="name"><br>
+	<label for="hp">HP:</label>
+	<input type="number" id="hp"><br>
+	<label for="attack">Attack:</label>
+	<input type="number" id="attack"><br>
+	<label for="defense">Defense:</label>
+	<input type="number" id="defense"><br>
+	<button onclick="addRow()">Add Pokemon</button>
+</body>
+</html>
